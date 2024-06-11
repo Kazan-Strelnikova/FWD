@@ -50,5 +50,5 @@ function updateCarousel() {
         a.style.transform = `translateX(${offset}px)`;
     })
 }
-
+ 
 
