@@ -50,5 +50,10 @@ function updateCarousel() {
         a.style.transform = `translateX(${offset}px)`;
     })
 }
- 
+
+
+const comic = document.getElementById('comic');
+comic.addEventListener('click', () => {
+    window.open('comic.html', '_blank');
+})
 

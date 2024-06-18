@@ -235,6 +235,21 @@ body {
     margin-left: 16px;
 }
 
+#comic {
+    height: 48px;
+    width: fit-content;
+    margin-left: 16px;
+    background-color: transparent;
+    border: 1px solid #FFF6F6 ;
+    border-radius: 8px;
+    box-shadow: 2px 4px 4px rgba(255, 105, 105, 0.5);
+    font-size: 20px;
+    font-family: 'Zilla Slab';
+    color: #FFF6F6;
+    cursor: pointer;
+}
+
+
 .signiture {
     font-size: 24px;
     color: #FFF6F6;
