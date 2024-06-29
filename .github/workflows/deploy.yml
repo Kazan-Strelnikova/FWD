@@ -24,7 +24,7 @@ jobs:
             git checkout -B gh-pages
             git merge master
             git commit -a -m "merged"
-            git push
+            git push --set-upstream origin gh-pages
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
