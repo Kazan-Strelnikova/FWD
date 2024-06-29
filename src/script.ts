@@ -1,7 +1,8 @@
 import './style.css';
-document.querySelectorAll('.menu_element').forEach(anchor => {
+document.querySelectorAll<HTMLElement>('.menu_element').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
+
         const targetId = this.getAttribute('href')?.substring(1);
         if (targetId) {
             const targetElement = document.getElementById(targetId);
@@ -14,11 +15,14 @@ document.querySelectorAll('.menu_element').forEach(anchor => {
         }
     });
 });
-const carousel = document.querySelector('.cards');
-const cards = document.querySelectorAll('.card');
+
+const carousel = document.querySelector<HTMLElement>('.cards');
+const cards = document.querySelectorAll<HTMLElement>('.card');
 const prevButton = document.getElementById('prevButton');
 const nextButton = document.getElementById('nextButton');
+
 let currentIndex = 0;
+
 if (prevButton) {
     prevButton.addEventListener('click', () => {
         if (currentIndex > 0) {
@@ -27,6 +31,7 @@ if (prevButton) {
         }
     });
 }
+
 if (nextButton) {
     nextButton.addEventListener('click', () => {
         if (currentIndex < (carousel?.children.length || 0) - 1) {
@@ -35,6 +40,7 @@ if (nextButton) {
         }
     });
 }
+
 function updateCarousel() {
     if (carousel) {
         cards.forEach(card => {
@@ -43,6 +49,7 @@ function updateCarousel() {
         });
     }
 }
+
 const comic = document.getElementById('comic');
 if (comic) {
     comic.addEventListener('click', () => {
