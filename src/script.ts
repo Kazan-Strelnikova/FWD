@@ -1,4 +1,3 @@
-import './style.css';
 document.querySelectorAll<HTMLElement>('.menu_element').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
