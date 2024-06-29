@@ -23,7 +23,7 @@ jobs:
             git config user.email "strelnikova.kira354@gmail.com"
             git checkout -B gh-pages
             git merge master
-            git commit
+            git commit -a
             git push
 
       - name: Deploy to GitHub Pages
