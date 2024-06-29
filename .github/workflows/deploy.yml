@@ -18,7 +18,7 @@ jobs:
           npm run build
 
       - name: Deploy to GitHub Pages
-        uses: Kazan-Strelnikova/github-pages-deploy-action@4.1.5
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} 
           BRANCH: master
