@@ -23,7 +23,7 @@ jobs:
             git config user.email "strelnikova.kira354@gmail.com"
             git checkout -B gh-pages
             git merge master --no-edit
-            git mkdir dist
+            git add dist
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
