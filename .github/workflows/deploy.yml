@@ -19,8 +19,8 @@ jobs:
 
       - name: Merge with master
         run: |
-            git config user.name "Kazan-Strelnikova"
-            git config user.email "strelnikova.kira354@gmail.com"
+            git config user.name "Github Actions"
+            git config user.email "<>"
             git checkout gh-pages
             git merge master --no-edit
 
