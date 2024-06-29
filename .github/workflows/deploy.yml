@@ -22,7 +22,7 @@ jobs:
             git config user.name "Kazan-Strelnikova"
             git config user.email "strelnikova.kira354@gmail.com"
             git checkout -B gh-pages
-            git merge master --no-edit
+            git merge master
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
