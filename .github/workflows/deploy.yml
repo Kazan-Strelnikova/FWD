@@ -17,12 +17,7 @@ jobs:
           npm install
           npm run build
 
-      - name: Merge with master
-        run: |
-            git config user.name "Github Actions"
-            git config user.email "<>"
-            git checkout gh-pages
-            git merge master --no-edit
+      
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
@@ -30,4 +25,11 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}
           branch: gh-pages
           folder: /dist
+
+      - name: Merge with master
+        run: |
+              git config user.name "Github Actions"
+              git config user.email "<>"
+              git checkout gh-pages
+              git merge master --no-edit
 
