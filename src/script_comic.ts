@@ -1,4 +1,4 @@
-import moment from '../node_modules/moment';
+import { formatDistanceToNow } from 'date-fns';
 
 
 class FetchIdError extends Error {
@@ -16,12 +16,17 @@ class FetchComicError extends Error {
 }
 
 interface Comic {
-    safe_title: string;
-    img: string;
     alt: string;
-    year: number;
-    month: number;
     day: number;
+    img: string;
+    link: string;
+    month: number;
+    news: string;
+    num: number;
+    safe_title: string;
+    title: string;
+    transcript: string;
+    year: number;
 }
 
 async function ComicFetch() {
@@ -54,8 +59,7 @@ async function ComicFetch() {
         image.alt = comic.alt;
         const ComicDate = new Date(comic.year, comic.month - 1, comic.day);
         date.textContent = ComicDate.toLocaleDateString();
-        const comicDateMoment = moment(ComicDate);
-        released.textContent = "Released " + comicDateMoment.fromNow();
+        released.textContent = "Released " + formatDistanceToNow(ComicDate) + " ago";
 
     } catch (error) {
         if (error instanceof FetchIdError || error instanceof FetchComicError) {
